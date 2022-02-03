@@ -71,7 +71,9 @@ header {
     display: inline;
     margin: 0 1rem;
 }
-
+.header__content p{
+    text-shadow: 17px 11px 9px red;
+}
 .header__content ul a {
     text-decoration: none;
     color: white;
@@ -121,7 +123,15 @@ header {
     font-size: 1.1rem;
     padding: 23px 0;
 }
+/* 
+.carousel button:hover{
+    /* animation: upDown 1s linear 0s 10; */
+    /* animation: upDown2 1s linear 0s 10; */
 
+
+.carousel__content:hover button{
+    animation: upDown3 2s 1s backwards;
+}
 .intro {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -151,6 +161,7 @@ header {
 .intro__item img {
     width: 100%;
     display: block;
+    animation-count
 }
 
 .intro__item h3 {
@@ -466,7 +477,11 @@ header {
 .team__item:hover .team__details {
     opacity: 1;
 }
-
+.team__item2 .team__details{
+    opacity: 1;
+    transform: translateX(-100%);
+}
+.team__item2:hover .team__details
 /* FEEDBACK */
 .feedback {
     background-image: url("/img/cc1.jpg");
@@ -712,4 +727,34 @@ footer {
 .cd-top--is-visible {
     visibility: visible;
     opacity: 1;
+}
+
+@keyframes upDown{
+    0%{}
+    50%{
+        transform: translateY(-20px);
+
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes upDown2{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+@keyframes upDown3{
+    0%{
+        transform: translateY(0);
+        background-color: red;
+    }
+    100%{
+        transform: translateY(50px);
+        background-color: yellow;
+    }
 }
